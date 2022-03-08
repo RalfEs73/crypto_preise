@@ -15,6 +15,6 @@ $max = $response.data.length
 
 for ($i=0; $i -lt $max; $i++)
 	{
-	$response.data[$i].name
-	$response.data[$i].id
+	Write-Host -ForegroundColor Red $response.data[$i].name
+	Write-Host $response.data[$i].id
 	}
