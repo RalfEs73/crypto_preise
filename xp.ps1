@@ -3,7 +3,7 @@
     Content='application/json'
 }
 
-$response = Invoke-RestMethod -Method Get -Uri 'https://pro-api.coinmarketcap.com/v1/tools/price-conversion?id=1&amount=1&convert=USD' -Headers $headers
+$response = Invoke-RestMethod -Method Get -Uri "https://pro-api.coinmarketcap.com/v1/tools/price-conversion?id=1367&amount=1&convert=USD" -Headers $headers
 $data = $response | ConvertTo-Json
 $response.data[0].name
 $response.data[0].quote[0].USD[0].price
