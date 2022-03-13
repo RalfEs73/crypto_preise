@@ -9,5 +9,7 @@ Aufruf:
 Beispiel:
 ```sh
 btc
+```
+```sh
 btc 0.154
 ```
