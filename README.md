@@ -26,6 +26,7 @@ Bisher werden die folgenden Coins unterstützt:
 * btc
 * cro
 * eth
+* firo
 * hnt
 * ltc
 * monk
