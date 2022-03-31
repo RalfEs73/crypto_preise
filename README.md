@@ -23,8 +23,10 @@ crypto-id bcn
 
 ## Supportete Coins
 Bisher werden die folgenden Coins unterstützt:
+* bnb
 * btc
 * cro
+* doge
 * eth
 * firo
 * hnt
