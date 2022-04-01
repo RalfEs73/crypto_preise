@@ -1,5 +1,6 @@
 # Crypto Preise
 ## How to use
+Bevor es losgeht, muss der API Key von Coinmarketcap in die Registry eingetragen werden. Am besten nutze dafür die API Import.reg Datei. Editiere die vorab und trage dort deinen persönlichen API Key ein. Anschließend importiere die Reg Datei.
 Am besten den Pfad der Scripte in den Windows Path Umgebungsvariablen hinzufügen.
 Aufruf:
 ```sh
