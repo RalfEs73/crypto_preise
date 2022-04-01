@@ -2,8 +2,12 @@
 	[string]$crypto="btc"
 	)
 
+$RegPath="HKCU:\Software\Crypto Preise"
+$reg=Get-ItemProperty $RegPath
+$api = $reg.API_KEY
+
 $headers = @{
-    'X-CMC_PRO_API_KEY'='02372bda-5f7d-444b-891b-fee24172e440'
+    'X-CMC_PRO_API_KEY'="$api"
     Content='application/json'
 }
 
