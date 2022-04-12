@@ -27,6 +27,7 @@ Bisher werden die folgenden Coins unterstützt:
 * bnb
 * btc
 * cro
+* dashd
 * doge
 * eth
 * firo
