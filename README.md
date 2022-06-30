@@ -31,11 +31,13 @@ Bisher werden die folgenden Coins unterstützt:
 * doge
 * eth
 * firo
+* gst
 * hnt
 * ltc
 * monk
 * pny
 * scc
 * shib
+* sol
 * xmr
 * xp
