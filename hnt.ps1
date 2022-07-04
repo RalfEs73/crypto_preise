@@ -13,7 +13,7 @@ $headers = @{
 
 $crypto_id = 5665
 $response = Invoke-RestMethod -Method Get -Uri "https://pro-api.coinmarketcap.com/v1/tools/price-conversion?id=$crypto_id&amount=1&convert=USD" -Headers $headers
-$data = $response | ConvertTo-Json
+$data = $response | ConvertTo-Json -Depth 9
 
 Write-Host -ForegroundColor Red $response.data[0].name
 Write-Host "$"$response.data[0].quote[0].USD[0].price

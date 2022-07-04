@@ -12,7 +12,7 @@ $headers = @{
 }
 
 $response = Invoke-RestMethod -Method Get -Uri "https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?symbol=$crypto" -Headers $headers
-$data = $response | ConvertTo-Json
+$data = $response | ConvertTo-Json -Depth 9
 
 $max = $response.data.length
 
