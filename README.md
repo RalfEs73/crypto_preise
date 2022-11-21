@@ -27,10 +27,14 @@ Bisher werden die folgenden Coins unterstützt:
 * bnb
 * btc
 * cro
+* dash
 * dashd
 * doge
+* edel
 * eth
 * firo
+* ghny
+* gmt
 * gst
 * hnt
 * ltc
