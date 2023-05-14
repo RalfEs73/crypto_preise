@@ -30,6 +30,7 @@ Bisher werden die folgenden Coins unterstützt:
 * dash
 * dashd
 * doge
+* duco
 * edel
 * eth
 * firo
