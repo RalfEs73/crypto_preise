@@ -44,5 +44,6 @@ Bisher werden die folgenden Coins unterstützt:
 * scc
 * shib
 * sol
+* trump
 * xmr
 * xp
