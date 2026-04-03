@@ -24,26 +24,8 @@ crypto-id bcn
 
 ## Supportete Coins
 Bisher werden die folgenden Coins unterstützt:
-* bnb
 * btc
 * cro
-* dash
-* dashd
-* doge
-* duco
-* edel
-* eth
-* firo
-* ghny
 * gmt
 * gst
-* hnt
-* ltc
-* monk
-* pny
-* scc
-* shib
 * sol
-* trump
-* xmr
-* xp
