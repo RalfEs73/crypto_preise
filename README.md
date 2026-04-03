@@ -28,4 +28,5 @@ Bisher werden die folgenden Coins unterstützt:
 * cro
 * gmt
 * gst
+* kas
 * sol
