@@ -2,9 +2,7 @@
 	[string]$crypto="btc"
 	)
 
-$RegPath="HKCU:\Software\Crypto Preise"
-$reg=Get-ItemProperty $RegPath
-$api = $reg.API_KEY
+$ApiKey = Get-Content "$PSScriptRoot/Token.txt"
 
 $headers = @{
     'X-CMC_PRO_API_KEY'="$api"

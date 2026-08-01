@@ -30,3 +30,4 @@ Bisher werden die folgenden Coins unterstützt:
 * gst
 * kas
 * sol
+* trump
