@@ -17,46 +17,17 @@ param(
     [ValidatePattern('^[A-Z]{3,5}$')]
     [string]$Convert = "USD",
 
-    [string]$RegPath = "HKCU:\Software\Crypto Preise",
-    [string]$RegValue = "API_KEY",
-
     [switch]$ShowUnitAndTotal,
     [switch]$AsJson
 )
 
+$ApiKey = Get-Content "$PSScriptRoot/Token.txt"
+
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-function Get-CmcApiKey {
-    param(
-        [Parameter(Mandatory)]
-        [string]$Path,
-        [Parameter(Mandatory)]
-        [string]$Value
-    )
-
-    if (-not (Test-Path -LiteralPath $Path)) {
-        throw "Registry-Pfad nicht gefunden: $Path"
-    }
-
-    $reg = Get-ItemProperty -LiteralPath $Path -ErrorAction Stop
-
-    if (-not ($reg.PSObject.Properties.Name -contains $Value)) {
-        throw "Registry-Wert '$Value' nicht gefunden unter: $Path"
-    }
-
-    $apiKey = [string]$reg.$Value
-    if ([string]::IsNullOrWhiteSpace($apiKey)) {
-        throw "API-Key ist leer in Registry: $Path\$Value"
-    }
-
-    return $apiKey.Trim()
-}
-
 function Resolve-CmcIdFromSymbol {
     param(
-        [Parameter(Mandatory)]
-        [string]$ApiKey,
         [Parameter(Mandatory)]
         [string]$Symbol
     )
@@ -111,15 +82,13 @@ try {
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     }
 
-    $apiKey = Get-CmcApiKey -Path $RegPath -Value $RegValue
-
     if ($PSCmdlet.ParameterSetName -eq 'BySymbol') {
-        $CryptoId = Resolve-CmcIdFromSymbol -ApiKey $apiKey -Symbol $Symbol
+        $CryptoId = Resolve-CmcIdFromSymbol -ApiKey $ApiKey -Symbol $Symbol
     }
 
     $Convert = $Convert.ToUpperInvariant()
 
-    $response = Get-CmcConversion -ApiKey $apiKey -CryptoId $CryptoId -Amount $Amount -Convert $Convert
+    $response = Get-CmcConversion -ApiKey $ApiKey -CryptoId $CryptoId -Amount $Amount -Convert $Convert
 
     # --------------------------
     # ROBUSTES PARSING (Fix für SOL/Amount)
