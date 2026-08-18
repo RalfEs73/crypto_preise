@@ -19,7 +19,7 @@ Die aktuellen Preise werden von Coinmarketcap gezogen. Jedes Script hat demendsp
 Sollte man einen neune Coin hinzufügen wollen, muss nur das Script `crypto-id` genutzt werden um die ID des Coins auf coinmarketcap.com zu erfahren.<br />
 Beispiel:
 ```sh
-crypto-id bcn
+crypto-id sol
 ```
 
 ## Supportete Coins
